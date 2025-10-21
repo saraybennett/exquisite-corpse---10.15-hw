@@ -16,21 +16,41 @@
     <h1>Exquisite Corpse 🥀</h1>
     <div class="description">
       <p>
-        Exquisite Corpse is a story game where you only get to see what the
-        person before you has written and then you add your own piece of the
-        story. The next person only sees what you've written and so on and so
-        forth. At the end, the whole story is revealed!
+        Exquisite Corpse is a story game where you get to see what the person
+        before you has written and then you add your own parts. The next person
+        only sees what you've written and so on and so forth. At the end, the
+        whole story is revealed!
       </p>
     </div>
-    <!-- display only the most recent comment -->
-    <section class="container">
-      <h2>the last person's addition to the story</h2>
-      <section id="feed"></section>
+    <!-- display only the most recent addition to the story -->
+    <section class="current-message">
+      <h2>The latest addition to the story:</h2>
+      <section id="latest-message"></section>
     </section>
     <!-- container for input & button -->
     <section class="container">
-      <input type="text" id="msg-input" placeholder="message" />
-      <button id="msg-submit">Add Your Own Additon to the Story</button>
+      <div class="message-input">
+        <input
+          type="text"
+          id="msg-input"
+          placeholder="type your story addition"
+        />
+      </div>
+      <div>
+        <!-- <button class="fantasy-btn fantasy-bone-n-coper">.fantasy-btn + .fantasy-bone-n-coper</button><br><br> 
+          button styling from: https://codepen.io/propjockey/pen/poqKrGe-->
+        <button class="fantasy-button" id="msg-submit">
+          Add Your Own Additon to the Story
+        </button>
+      </div>
+    </section>
+
+    <!-- display entire story -->
+    <section class="story-button">
+      <button class="fantasy-button" id="button-story">
+        Click to Read The Whole Story
+      </button>
+      <section id="feed"></section>
     </section>
 
     <!-- link to js file here -->

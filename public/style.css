@@ -2,8 +2,10 @@ body {
   color: azure;
   background-color: black;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
 }
+
 h1 {
   text-align: center;
   font-family: "UnifrakturCook", cursive;
@@ -13,8 +15,20 @@ h1 {
   color: red;
 }
 
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+
 h2 {
   color: red;
+  font-family: "UnifrakturCook", cursive;
+}
+.current-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 .container {
   display: flex;
@@ -22,8 +36,49 @@ h2 {
   align-items: center;
 }
 
+.message-input {
+  padding: 30px;
+}
+
 button {
   margin-top: 10px;
+}
+
+.fantasy-button {
+  /* Basic Button Styling */
+  background: linear-gradient(
+    to bottom,
+    #1c1c1c,
+    #bf0000
+  ); /* Gradient for depth */
+  border: 2px solid #400000; /* Golden border */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 12px 24px;
+  color: #fff; /* White text */
+  font-family: "Georgia", serif; /* Classic font for a fantasy feel */
+  font-size: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for lift */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+
+  /* Optional: Text decoration for more fantasy feel */
+  letter-spacing: 1px;
+}
+
+.fantasy-button:hover {
+  background: linear-gradient(
+    to bottom,
+    #400000,
+    #bf0000
+  ); /* Lighter gradient on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.fantasy-button:active {
+  transform: translateY(0); /* Press down effect on active */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
 }
 
 .description {
@@ -31,4 +86,11 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0 100px;
+}
+
+.story-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px;
 }

@@ -10,23 +10,12 @@ window.addEventListener("load", () => {
 
       let theData = data.messages;
 
-      //Select for element on the page
-      let feed = document.getElementById("feed");
-      //Loop through data and append to the page
-      for (let i = 0; i < theData.length; i++) {
-        let currentMessage = theData[i].message;
-        console.log(currentMessage);
+      //Select for element on the page and display only most recent message
+      let latestMessage = theData[theData.length - 1].message;
+      console.log("this is the latest meessage:" + latestMessage);
 
-        let currentEl = document.createElement("p");
-        currentEl.innerHTML = currentMessage;
-
-        feed.appendChild(currentEl);
-
-        //trying to figure out how to just display the last message from my database but this just gives me the last message on page load. I want it to automatically update when the database is updated
-
-        let latestMessage = theData[theData.length - 1].message;
-        console.log("this is the latest meessage:" + latestMessage);
-      }
+      let mostRecentMessage = document.getElementById("latest-message");
+      mostRecentMessage.innerHTML = latestMessage;
     })
 
     .catch((error) => {
@@ -58,15 +47,42 @@ window.addEventListener("load", () => {
         console.log("Did this work?");
         console.log(data);
 
-        //add to the page if it worked
+        //add to the story if it worked
 
-        let feed = document.getElementById("feed");
-        let currentEl = document.createElement("p");
-        currentEl.innerHTML = currentMessage;
-        feed.appendChild(currentEl);
+        let mostRecentMessage = document.getElementById("latest-message");
+        mostRecentMessage.innerHTML = currentMessage;
 
         msgInput.value = "";
       })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+  //after adding their own addition, person clicks to reveal the story
+  let storyButton = document.getElementById("button-story");
+  storyButton.addEventListener("click", () => {
+    console.log("story button was clicked");
+    //fetch call to get the entire database
+    fetch("/data")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+
+        let theData = data.messages;
+
+        // Loop through data and append to the page
+
+        let feed = document.getElementById("feed");
+        for (let i = 0; i < theData.length; i++) {
+          let currentMessage = theData[i].message;
+
+          let currentEl = document.createElement("p");
+          currentEl.innerHTML = currentMessage;
+
+          feed.appendChild(currentEl);
+        }
+      })
+
       .catch((error) => {
         console.log(error);
       });
