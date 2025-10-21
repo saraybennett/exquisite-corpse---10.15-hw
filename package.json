@@ -1,0 +1,17 @@
+{
+  "name": "exquisite-corpse---10.15-hw",
+  "version": "1.0.0",
+  "description": "homework assignment for connections lab 10.15.25",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "lowdb": "^7.0.1",
+    "save": "^2.9.0"
+  }
+  
+}

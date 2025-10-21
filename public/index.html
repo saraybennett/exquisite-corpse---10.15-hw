@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exquisite Corpse 🥀</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Exquisite Corpse 🥀</h1>
+    <div class="description">
+      <p>
+        Exquisite Corpse is a story game where you only get to see what the
+        person before you has written and then you add your own piece of the
+        story. The next person only sees what you've written and so on and so
+        forth. At the end, the whole story is revealed!
+      </p>
+    </div>
+    <!-- display only the most recent comment -->
+    <section class="container">
+      <h2>the last person's addition to the story</h2>
+      <section id="feed"></section>
+    </section>
+    <!-- container for input & button -->
+    <section class="container">
+      <input type="text" id="msg-input" placeholder="message" />
+      <button id="msg-submit">Add Your Own Additon to the Story</button>
+    </section>
+
+    <!-- link to js file here -->
+    <script src="./app.js"></script>
+  </body>
+</html>
