@@ -73,6 +73,8 @@ window.addEventListener("load", () => {
         // Loop through data and append to the page
 
         let feed = document.getElementById("feed");
+        feed.innerHTML = "";
+
         for (let i = 0; i < theData.length; i++) {
           let currentMessage = theData[i].message;
 
